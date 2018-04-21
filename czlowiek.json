@@ -1,0 +1,10 @@
+{
+  "name": "Andrzej",
+  "surname": "Kowalski",
+  "age": 99,
+  "gender": "Male",
+  "e-mail": "blabla@blabla.pl",
+  "phone": {
+    "landline": "5555",
+    "mobile": "777"
+  }
