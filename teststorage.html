@@ -1,0 +1,31 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>New Tab App</title>
+</head>
+<body>
+    <form name="dane">
+      <input id="item" type="text" placeholder="Name">
+    </form>
+  <div class="small-container">
+	<button onClick="save()" id="save">Save</button>
+  </div>
+<script>
+        console.log("Nasz pierwszy skrypt!");
+    </script>
+<script>
+	function save(j){
+	console.time("a");
+	for(i=1; i<=j; i++){
+		localStorage.setItem("Liczba: "+i, Math.random());
+		}
+	console.timeEnd("a");
+	}
+	
+</script>
+</body>
+
+</html>
