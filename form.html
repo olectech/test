@@ -1,0 +1,41 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>New Tab App</title>
+</head>
+<body>
+
+  <div class="small-container">
+    <form name="dane">
+      <input id="item" type="text" placeholder="Name">
+	  <input id="item2" type="text" placeholder="Surname">
+    </form>
+
+    <ul></ul>
+
+    <button onClick="save()" id="save">Save</button>
+	<button onClick="restore()" id="restore">Restore</button>
+  </div>
+<script>
+        console.log("Nasz pierwszy skrypt!");
+    </script>
+<script>
+	function save(){
+		var name = document.dane.item.value;
+		var surname = document.dane.item2.value;
+		localStorage.setItem("name", name);
+		localStorage.setItem("surname", surname);
+	}
+	function restore(){
+		var rname = localStorage.name;
+		var rsurname = localStorage.surname;
+		document.dane.item.value = rname;
+		document.dane.item2.value = rsurname;
+	}
+</script>
+</body>
+
+</html>

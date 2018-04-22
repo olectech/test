@@ -1,0 +1,183 @@
+{
+  "person list": [{
+  "name": "Andrzej",
+  "surname": "Kowalski",
+  "age": 99,
+  "gender": "Male",
+  "e-mail": "blabla@blabla.pl",
+  "phone": {
+    "landline": "5555",
+    "mobile": "777"
+  },
+  "address": {
+    "street": "Kolejowa",
+    "home number": "26262",
+    "postal code": "55-555",
+    "city": "Kraków"
+  },
+  "interests": [
+    "sport",
+    "muzyka",
+    "film"
+  ],
+  "family": {
+    "spouse": {
+      "name": "Joanna",
+      "surname": "Kowalska"
+    },
+    "children list": [
+      {
+        "name": "Andrzej",
+        "surname": "Włodarski",
+        "gender": "Male",
+        "age": 9,
+        "interests list": [
+          "sport",
+          "strzelectwo"
+        ]
+      },
+      {
+        "name": "Andrzej",
+        "surname": "Włodarski",
+        "gender": "Male",
+        "age": 15,
+        "interests list": [
+          "sport",
+          "strzelectwo"
+        ]
+      },
+      {
+        "name": "Andrzej",
+        "surname": "Włodarski",
+        "gender": "Male",
+        "age": 19,
+        "interests list": [
+          "sport",
+          "strzelectwo"
+        ]
+      }
+    ]
+  }
+  },
+  {
+  "name": "Andrzej",
+  "surname": "Kowalski",
+  "age": 99,
+  "gender": "Male",
+  "e-mail": "blabla@blabla.pl",
+  "phone": {
+    "landline": "5555",
+    "mobile": "777"
+  },
+  "address": {
+    "street": "Kolejowa",
+    "home number": "26262",
+    "postal code": "55-555",
+    "city": "Kraków"
+  },
+  "interests": [
+    "sport",
+    "muzyka",
+    "film"
+  ],
+  "family": {
+    "spouse": {
+      "name": "Joanna",
+      "surname": "Kowalska"
+    },
+    "children list": [
+      {
+        "name": "Andrzej",
+        "surname": "Włodarski",
+        "gender": "Male",
+        "age": 9,
+        "interests list": [
+          "sport",
+          "strzelectwo"
+        ]
+      },
+      {
+        "name": "Andrzej",
+        "surname": "Włodarski",
+        "gender": "Male",
+        "age": 15,
+        "interests list": [
+          "sport",
+          "strzelectwo"
+        ]
+      },
+      {
+        "name": "Andrzej",
+        "surname": "Włodarski",
+        "gender": "Male",
+        "age": 19,
+        "interests list": [
+          "sport",
+          "strzelectwo"
+        ]
+      }
+    ]
+  }
+  },
+  {
+  "name": "Andrzej",
+  "surname": "Kowalski",
+  "age": 99,
+  "gender": "Male",
+  "e-mail": "blabla@blabla.pl",
+  "phone": {
+    "landline": "5555",
+    "mobile": "777"
+  },
+  "address": {
+    "street": "Kolejowa",
+    "home number": "26262",
+    "postal code": "55-555",
+    "city": "Kraków"
+  },
+  "interests": [
+    "sport",
+    "muzyka",
+    "film"
+  ],
+  "family": {
+    "spouse": {
+      "name": "Joanna",
+      "surname": "Kowalska"
+    },
+    "children list": [
+      {
+        "name": "Andrzej",
+        "surname": "Włodarski",
+        "gender": "Male",
+        "age": 9,
+        "interests list": [
+          "sport",
+          "strzelectwo"
+        ]
+      },
+      {
+        "name": "Andrzej",
+        "surname": "Włodarski",
+        "gender": "Male",
+        "age": 15,
+        "interests list": [
+          "sport",
+          "strzelectwo"
+        ]
+      },
+      {
+        "name": "Andrzej",
+        "surname": "Włodarski",
+        "gender": "Male",
+        "age": 19,
+        "interests list": [
+          "sport",
+          "strzelectwo"
+        ]
+      }
+    ]
+  }
+  }
+  ]
+}

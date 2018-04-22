@@ -1,0 +1,52 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>New Tab App</title>
+</head>
+<body>
+
+  <div class="small-container">
+    <form name="dane">
+      <input id="username" type="text">
+	  <input id="password" type="text">
+    </form>
+
+    <ul></ul>
+
+    <button onClick="login()" id="login">Login</button>
+  </div>
+<script>
+        console.log("Nasz pierwszy skrypt!");
+    </script>
+<script>
+	/*function save(){
+		var username = document.dane.username.value;
+		var password = document.dane.password.value;
+		localStorage.setItem("username", username);
+		localStorage.setItem("password", password);
+	}
+	function loaddata(){
+		var rname = localStorage.name;
+		var rsurname = localStorage.surname;
+		document.dane.item.value = rname;
+		document.dane.item2.value = rsurname;
+	}*/
+		function login(){
+		var username = document.dane.username.value;
+		var password = document.dane.password.value;
+		if(username==localStorage.username && password==localStorage.password){
+			alert('User logged in succesfully!');
+		}	
+		else{
+			alert('User does not exist');
+			localStorage.setItem("username", username);
+			localStorage.setItem("password", password);
+		}
+	}
+</script>
+</body>
+
+</html>

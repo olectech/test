@@ -1,0 +1,33 @@
+<html>
+<body>
+
+<h2>Convert a string into a function.</h2>
+
+<p id="demo"></p>
+<div id="result"></div>
+<div id="result2"></div>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+var myJSON = "DEMO";
+//$.getJSON('https://raw.githubusercontent.com/olectech/test/master/czlowiek.json', function(data) {
+    //data is the JSON string
+//});
+$.getJSON('/czlowiek.json', function(data) {
+    //data is the JSON string
+	myJSON = JSON.stringify(data);
+});
+</script>
+<script>
+if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("lastname", "Smith");
+	localStorage.setItem("surname", "Kowalski");
+    // Retrieve
+    document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+} else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+document.getElementById("result2").innerHTML = myJSON;
+</script>
+</body>
+</html>
