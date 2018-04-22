@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+
+   <head>
+	
+      <script type="text/javascript">
+	function Name(){
+	  db.transaction(function (tx) {
+            tx.executeSql('SELECT * FROM user order by name', [], function (tx, results) {
+               var len = results.rows.length, i;
+               msg = "<p>Found rows: " + len + "</p>";
+               document.querySelector('#status').innerHTML +=  msg;
+					
+               for (i = 0; i < len; i++){
+                  msg = "<p><b>" + results.rows.item(i).name + "</b></p>";
+                  document.querySelector('#status').innerHTML +=  msg;
+               }
+            }, null);
+         });
+	  }
+	  function surname(){
+	  db.transaction(function (tx) {
+            tx.executeSql('SELECT * FROM user order by surname', [], function (tx, results) {
+               var len = results.rows.length, i;
+               msg = "<p>Found rows: " + len + "</p>";
+               document.querySelector('#status').innerHTML +=  msg;
+					
+               for (i = 0; i < len; i++){
+                  msg = "<p><b>" + results.rows.item(i).surname + "</b></p>";
+                  document.querySelector('#status').innerHTML +=  msg;
+               }
+            }, null);
+         });
+	  }
+		
+         var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+         var msg;
+			
+         db.transaction(function (tx) {
+            tx.executeSql('CREATE TABLE IF NOT EXISTS USER (id unique, name, surname, age, username, email)');
+            tx.executeSql('INSERT INTO USER (id, name, surname, age, username, email) VALUES (1, "Beverly", "Bell", 35, "bbell0", "bbell0@storify.com");');
+			tx.executeSql('INSERT INTO USER (id, name, surname, age, username, email) values (2, "Jane", "Fields", 35, "jfields1", "jfields1@privacy.gov.au");');
+			tx.executeSql('INSERT INTO USER (id, name, surname, age, username, email) values (3, "Jane", "Simmons", 25, "jsimmons2", "jsimmons2@discovery.com");');
+            tx.executeSql('INSERT INTO USER (id, name, surname, age, username, email) values (4, "Russell", "Garrett", 35, "rgarrett3", "rgarrett3@php.net");');
+			tx.executeSql('INSERT INTO USER (id, name, surname, age, username, email) values (5, "Lori", "Dixon", 23, "ldixon4", "ldixon4@myspace.com");');
+            msg = '<p>Log message created and row inserted.</p>';
+            document.querySelector('#status').innerHTML =  msg;
+         });
+		function wyswietl(){
+         db.transaction(function (tx) {
+            tx.executeSql('SELECT * FROM user order by surname', [], function (tx, results) {
+               var len = results.rows.length, i;
+               msg = "<p>Found rows: " + len + "</p>";
+               document.querySelector('#status').innerHTML +=  msg;
+					
+               for (i = 0; i < len; i++){
+                  msg = "<p><b>" + results.rows.item(i).id + " " + results.rows.item(i).name + " " + results.rows.item(i).surname + " " + results.rows.item(i).age + " " + results.rows.item(i).username + " " + results.rows.item(i).email +"</b></p>";
+                  document.querySelector('#status').innerHTML +=  msg;
+               }
+            }, null);
+         });
+			}
+			
+      </script>
+		
+   </head>
+	
+   <body>
+   Sortowanie: 
+   <button onClick="Name()" id="name">Name</button>
+   <button onClick="surname()" id="surname">Surname</button>
+   <button onClick="wyswietl()" id="wyswietl">Wyswietl wszystko</button>
+      <div id="status" name="status">Status Message</div>
+   </body>
+	
+</html>
